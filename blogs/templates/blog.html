@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ blog_title }}</title>
+    <link rel="stylesheet" href="{% static 'blogs/css/blog.css' %}">
+</head>
+<body>
+    <div class="vignette"></div>
+    <header class="header">
+        <div class="wrapper">
+            <a href="{% url 'blogs' %}" class="link link__buttoned">Blogs</a>
+            <div class="header__title text">{{ blog_title }}</div>
+            <a href="{% url 'user_profile' %}" class="link link__buttoned">My Profile</a>
+        </div>
+    </header>
+    <section class="blog section">
+        <img src="{% static 'blogs/images/galactic.png' %}" alt="" class="blog__image">
+        <div class="blog__wrapper">
+            <div class="blog__author">
+                <div class="blog__author__title text">Author:</div>
+                <a href="{% url 'other_profile' username=blog_author %}" class="blog__author__link link">{{ blog_author }}</a>
+            </div>
+            <div class="blog__text text">{{ blog_body }}</div>
+        </div>
+    </section>
+</body>
+</html>

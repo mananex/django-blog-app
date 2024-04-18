@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% if title %}
+        Edit blog!
+        {% else %}
+        Create blog!
+        {% endif %}
+    </title>
+    <link rel="stylesheet" href="{% static 'blogs/css/edit_blog.css' %}">
+</head>
+<body>
+    <header class="header section">
+        <div class="wrapper">
+            <a href="{% url 'user_profile' %}" class="header__profile__link link link__buttoned link__bordered">To profile</a>
+        </div>
+    </header>
+    <section class="edit section">
+        <img src="{% static 'blogs/images/human.png' %}" alt="" class="edit__background">
+        <div class="wrapper">
+            <div class="edit__upper">
+                <div>
+                    <div class="edit__upper__text text">Blog title</div>
+                    <input cols="30" rows="1" placeholder="it was a good day..." class="edit__field text" maxlength="60" id="blog__title" value="{{ title|escape }}">
+                    
+                </div>
+                <div class="edit__upper__button" title="Save this blog" id="save__blog">Save</div>
+                <p class="text" style="padding-left:20px;font-size:20px;" id="blog__error"></p>
+            </div>
+            <div class="edit__bottom">
+                <div class="edit__bottom__text text">The story...</div>
+                <textarea cols="80" rows="20" class="edit__field text transparent" placeholder="was it a good day?" id="blog__body">{{ body|escape }}</textarea>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'common/js/jquery.min.js' %}"></script>
+    {% if title %}
+    <script>
+        let blogID = "{{ blog_id }}"
+    </script>
+    <script src="{% static 'blogs/js/edit_blog.js' %}"></script>
+    {% else %}
+    <script src="{% static 'blogs/js/create_blog.js' %}"></script>
+    {% endif %}
+</body>
+</html>

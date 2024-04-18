@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggo</title>
+    <link rel="stylesheet" href="{% static 'blogs/css/blogs.css' %}">
+</head>
+<body>
+    <div class="vignette"></div>
+    <section class="blogs section">
+        <img src="{% static 'blogs/images/galactic.png' %}" alt="" class="blogs__image blogs__image__galactic">
+        <div class="blogs__scrollable">
+        </div>
+        <div class="blogs__interaction">
+            <div class="blogs__interaction__head">
+                <h1 class="blogs__interaction__head__title text">Search blogs!</h1>
+                <p class="blogs__interaction__head__description text">Search by keywords, use tags.</p>
+            </div>
+            <div class="blogs__interaction__search">
+                <input type="text" class="blogs__interaction__search__input text">
+                <button class="blogs__interaction__search__confirm">Search</button>
+            </div>
+            <div class="blogs__interaction__account__link">
+                <h1 class="blogs__interaction__account__link__title text">...or move to your profile!</h1>
+                <p class="blogs__interaction__account__link__text text">here's a link to do that.</p>
+                <a href="{% url 'user_profile' %}" class="blogs__interaction__account__link__link link link__bordered">Move to profile</a>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'common/js/jquery.min.js' %}"></script>
+    <script src="{% static 'blogs/js/blogs.js' %}"></script>
+</body>
+</html>
+
