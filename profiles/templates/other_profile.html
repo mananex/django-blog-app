@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }}</title>
+    <link rel="stylesheet" href="{% static 'profiles/css/other_profile.css' %}">
+</head>
+<body>
+    <div class="vignette"></div>
+    <section class="blogs section">
+        <img src="{% static 'profiles/images/galactic.png' %}" alt="" class="blogs__image blogs__image__galactic">
+        <div class="blogs__scrollable">
+            <h1 class="blogs__scrollable__header text">{{ name }}'s blogs</h1>
+        </div>
+        <div class="blogs__account">
+            <h1 class="blogs__account__header text">Other account</h1>
+            <div class="blogs__account__name">
+                <div class="blogs__account__name__title text">Account name</div>
+                <div class="blogs__account__name__name text">{{ name }}</div>
+            </div>
+            <div class="blogs__account__link">
+                <div class="blogs__account__link__title text">Account link:</div>
+                <div class="blogs__account__link__link text">http://localhost:8000/profile/{{ name }}</div>
+            </div>
+            <div class="blogs__account__search__blogs">
+                <div class="blogs__account__search__blogs__title text">Go to search page.</div>
+                <a href="{% url 'blogs' %}" class="blogs__account__search__blogs__button link link__bordered">Let's go</a>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'common/js/jquery.min.js' %}"></script>
+    <script>
+        let username = "{{ name }}" 
+    </script>
+    <script src="{% static 'profiles/js/other_profile.js' %}"></script>
+</body>
+</html>

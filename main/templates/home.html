@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/landing.css' %}">
+    <title>Bloggo | Welcome</title>
+</head>
+<body>
+    <div class="vignette"></div>
+    <header class="header section">
+        <div class="wrapper">
+            <!-- <a href="#" class="link link__bordered header__link link__buttoned">About</a> -->
+            <a href="{% url 'login' %}" class="link header__link link__buttoned">Log in</a>
+            <a href="{% url 'registration' %}" class="link header__link link__buttoned">Register</a>
+        </div>
+    </header>
+    <section class="promo section">
+        <div class="wrapper">
+            <h1 class="text promo__header">Bloggo is a simple website for creating blogs, looking for interesting ones and sharing 'em!</h1>
+            <p class="text promo__text">It's very easy to understand how Bloggo works! Just keep reading and you will understand the benefits of Bloggo.</p>
+            <img src="{% static 'main/images/promo.png' %}" alt="" class="promo__image">
+        </div>
+    </section>
+    <section class="description section">
+        <div class="wrapper">
+            <h1 class="text description__header">Bloggo is really easy to use.</h1>
+            <p class="text description__text">
+                Bloggo has a convenient and simple interface that even a child can use. 
+                You <b>may</b> find some interesting blogs written by other users using tags. 
+                In addition to blogs, you can create bloglists - collections of your blogs collected together. 
+                And you can share them with everyone! <span>It's really simple, isn't it?</span>
+            </p>
+            <div class="description__bg__block"></div>
+            <img src="{% static 'main/images/description.png' %}" alt="" class="description__image">
+        </div>
+    </section>
+    <section class="letgo section">
+        <div class="wrapper">
+            <h1 class="text letgo__header">So, what are you waiting for? <span>Let's go!</span></h1>
+            <p class="text letgo__text">Let's find out the amazing stories of many users! Let's share them! Grab a cup of tea and biscuits and...</p>
+            <a href="{% url 'registration' %}" class="text link link__buttoned link__bordered letgo__button">
+                <div class="letgo__button__mask"></div>
+                Register!
+            </a>
+        </div>
+    </section>
+    <footer class="footer section">
+        <div class="wrapper">
+            <div class="text footer__title">Bloggo | 2024. Made with Python and some html.</div>
+        </div>
+    </footer>
+</body>
+</html>

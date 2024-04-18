@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+*::-moz-selection {
+  background-color: #374146;
+}
+
+*::selection {
+  background-color: #374146;
+}
+
+section {
+  height: 600px;
+  width: 100%;
+  background-color: #466470;
+  position: relative;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+}
+
+.text {
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+  color: #6dacc5;
+  margin: 0 20px;
+  padding: 10px 15px;
+  transition: color 0.3s, border-color 0.3s, padding-top 0.1s;
+  cursor: pointer;
+}
+.link:hover {
+  color: #aacedf;
+}
+
+.link__bordered {
+  border: 2px solid #466470;
+}
+.link__bordered:hover {
+  border-color: #aacedf;
+}
+
+.link__buttoned {
+  box-shadow: 0px 0px 50px 1px black;
+}
+.link__buttoned:hover {
+  padding-top: 20px;
+}
+
+.vignette {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  box-shadow: inset 0px 0px 100px 1px black;
+  pointer-events: none;
+}
+
+body {
+  background-color: #364d57;
+}
+
+.register {
+  position: fixed;
+  height: 100%;
+}
+.register__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 800px;
+  height: 600px;
+  background-color: rgb(58, 87, 97);
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 0px 200px 100px rgba(1, 1, 1, 0.3);
+}
+.register__form__field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.register__form__field label {
+  font-size: 20px;
+}
+.register__form__field input {
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  outline: none;
+  margin-top: 5px;
+  background-color: #364d57;
+  color: white;
+  padding: 0 10px;
+  border: 2px solid #293b42;
+  transition: background-color 0.2s, border 0.3s;
+}
+.register__form__field input:hover {
+  background-color: #466470;
+  border: 2px solid #364d57;
+}
+.register__form__field input::-moz-placeholder {
+  color: white;
+}
+.register__form__field input::placeholder {
+  color: white;
+}
+.register__form__field .link__buttoned {
+  box-shadow: 0px 0px 100px 0px black;
+}
+.register__form__field .link__buttoned:hover {
+  padding-top: 0;
+}
+
+#register__error {
+  font-size: 22px;
+  color: rgb(243, 102, 102);
+}/*# sourceMappingURL=register.css.map */

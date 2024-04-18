@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggo | Log in</title>
+    <link rel="stylesheet" href="{% static 'main/css/login.css' %}">
+</head>
+<body>
+    <div class="vignette"></div>
+    <section class="register section">
+        <div class="register__form">
+            <p id="login__information" class="text"></p>
+            <div class="register__form__field">
+                <label class="text">User name</label>
+                <input type="text" required placeholder="Your user name" id="input__username">
+            </div>
+            <div class="register__form__field">
+                <label class="text">Password</label>
+                <input type="password" required placeholder="Your password" id="input__password">
+            </div>
+            <div class="register__form__field">
+                <input type="submit" value="Log in" class="text link link__buttoned" id="submit__login">
+            </div>
+        </div>
+        <script src="{% static 'common/js/jquery.min.js' %}"></script>
+        <script src="{% static 'main/js/login.js' %}"></script>
+    </section>
+</body>
+</html>

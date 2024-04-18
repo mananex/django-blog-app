@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggo | Profile</title>
+    <link rel="stylesheet" href="{% static 'profiles/css/user_profile.css' %}">
+</head>
+<body>
+    <div class="vignette"></div>
+    <section class="blogs section">
+        <img src="{% static 'profiles/images/galactic.png' %}" alt="" class="blogs__image blogs__image__galactic">
+        <div class="blogs__scrollable">
+            <h1 class="blogs__scrollable__header text">Your blogs</h1>
+            
+        </div>
+        <div class="blogs__account">
+            <h1 class="blogs__account__header text">Your account</h1>
+            <div class="blogs__account__name">
+                <div class="blogs__account__name__title text">Account name</div>
+                <div class="blogs__account__name__input">
+                    <input type="text" class="blogs__account__name__input__field text" value="{{ name }}" title="You can write new name and press enter">
+                    <button class="blogs__account__name__input__save text">Save</button>
+                </div>
+            </div>
+            <div class="blogs__account__link">
+                <div class="blogs__account__link__title text">Account link:</div>
+                <div class="blogs__account__link__link text">http://localhost:8000/profile/{{ name }}</div>
+            </div>
+            <div class="blogs__account__create__blog">
+                <div class="blogs__account__create__blog__title text">Wanna create a blog?</div>
+                <a href="{% url 'create_blog' %}" class="blogs__account__create__blog__button link link__bordered">Let's do it!</a>
+            </div>
+            <div class="blogs__account__search__blogs">
+                <div class="blogs__account__search__blogs__title text">Want new stories?</div>
+                <a href="{% url 'blogs' %}" class="blogs__account__search__blogs__button link link__bordered">Look for blogs!</a>
+            </div>
+            <div class="blogs__account__search__blogs">
+                <div class="blogs__account__search__blogs__title text">Or, if you want to leave...</div>
+                <a href="{% url 'logout' %}" class="blogs__account__leave text link link__bordered blogs__account__search__blogs__button">Log out</a>
+            </div>
+            
+        </div>
+    </section>
+    <script src="{% static 'common/js/jquery.min.js' %}"></script>
+    <script>
+        let auth_token = "{{ auth_token }}"
+    </script>
+    <script src="{% static 'profiles/js/user_profile.js' %}"></script>
+</body>
+</html>
