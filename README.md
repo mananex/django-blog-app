@@ -51,4 +51,6 @@ If you want to have access to the admin panel, you will also need to create a su
 
 ### 4. Launching the server
 Whenever you want to launch the server, first of all you need to open command line and activate the virtual environment. By running `cmd.bat` in the `django-blog-app` folder you will automatically launch the command line and activate the virtual environment.
-To launch the server use the command `python manage.py runserver`
+**To launch the server use the command** `python manage.py runserver`.
+
+### Thanks!
