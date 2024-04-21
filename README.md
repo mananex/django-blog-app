@@ -19,3 +19,4 @@ For Linux OS
 python3 -m venv venv-django-blog-app
 cd venv-django-blog-app
 ```
+And then, you can download this repository by running `git clone https://github.com/mananex/django-blog-app.git` in terminal/command line (**if you have git installed**), or you can just manually download the repository archive and unarchive it in the virtual environment.
