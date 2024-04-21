@@ -1,6 +1,9 @@
 # Django blog app
 ### This is a simple web application that allows users to create blogs, search for them using keywords, read other blogs and share them.
 
+#### Click on this to see the video.<br>
+[![Youtube link](https://img.youtube.com/vi/L-RaJAM4Su4/0.jpg)](https://www.youtube.com/watch?v=L-RaJAM4Su4)
+
 ## Installation
 First of all, you need to have Python 3.x installed. I'm using `Python 3.11.7`. **Installation manual made for Windows OS.**
 
