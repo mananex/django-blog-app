@@ -52,9 +52,7 @@ def login(request):
         request_body = json.loads(request.body)
         if functions.check_username(request_body['username']):
             profile = functions.auth_profile(request_body['username'], request_body['password'])
-            if profile: 
-                print('password is correct')
-                
+            if profile:
                 new_auth_token = functions.generate_token()
                 profile.auth_token = new_auth_token
                 profile.save()
