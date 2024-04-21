@@ -15,7 +15,7 @@ cd venv-django-blog-app
 ```
 Then you can download this repository by running `git clone https://github.com/mananex/django-blog-app.git` in terminal/command line (**if you have git installed**), or you can just manually download the repository archive and unzip it in the virtual environment.
 
-After this, the virtual environment directory should look like this:
+After this, the virtual environment folder should look like this:
 
 &emsp;&emsp;┌ `venv-django-blog-app` **(v-env name)**<br>
 &emsp;&emsp;├── `Include`<br>
