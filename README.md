@@ -34,7 +34,21 @@ After this, the virtual environment folder should look like this:
 &emsp;&emsp;├──── `requirements.txt`
 
 ### 2. Activating virtual environment and installing packages
-In the environment folder move to the `django-blog-app` (or `django-blog-app-main`) folder and run the `cmd.bat` file. **It will activate the virtual environment.**<br>
-To install all packages you should run `pip install -r requirements.txt` in the command line - after running the `cmd.bat` file (it's important).
+In the environment folder move to the `django-blog-app` (or `django-blog-app-main`) folder and run the `cmd.bat` file. **It will activate the virtual environment.** *Don't close it, you need to use it when setting up the project.*
 
-### 3. Launching the project
+To install all packages you should run `pip install -r requirements.txt` in the command line - after launching the `cmd.bat` file (*it's important*).
+
+### 3. Project setup
+Before launching the server you must run the following commands.
+```
+python manage.py makemigrations
+python manage.py migrate
+python manage.py collectstatic
+```
+
+If you want to have access to the admin panel, you will also need to create a superuser. You can do it by running the command `python manage.py createsuperuser`. To access the admin panel page go to the `/admin` page of the web app after launching it.<br>
+**Example:** `http://127.0.0.1:8000/admin`
+
+### 4. Launching the server
+Whenever you want to launch the server, first of all you need to open command line and activate the virtual environment. By running `cmd.bat` in the `django-blog-app` folder you will automatically launch the command line and activate the virtual environment.
+To launch the server use the command `python manage.py runserver`
