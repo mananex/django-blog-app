@@ -1,0 +1,9 @@
+# package name         # version
+asgiref             == 3.8.1
+Django              == 5.0.4
+django-cors-headers == 4.3.1
+pip                 == 23.2.1
+setuptools          == 65.5.0
+sqlparse            == 0.4.4
+tzdata              == 2024.1
+whitenoise          == 6.6.0
