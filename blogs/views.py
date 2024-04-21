@@ -13,8 +13,6 @@ def blogs(request):
     elif request.method == 'POST':
         request_body = json.loads(request.body)
         result_object = {}
-
-        print(request_body)
         
         if 'username' in request_body and request_body['username']:
             author_profile = modelsProfiles.Profile.objects.filter(username = request_body['username']).first()
