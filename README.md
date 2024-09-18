@@ -1,7 +1,7 @@
 # Django blog app
 ### This is a simple web application that allows users to create blogs, search for them using keywords, read other blogs and share them.
 
-#### Click on this to see the youtube video.<br>
+#### Click on the image to see the youtube video.<br>
 [![Youtube link](https://img.youtube.com/vi/L-RaJAM4Su4/0.jpg)](https://www.youtube.com/watch?v=L-RaJAM4Su4)
 
 ## Installation
